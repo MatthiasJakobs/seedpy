@@ -15,7 +15,7 @@ np.random.seed(0)
 before_fixedseed = np.random.rand(5)
 
 with fixedseed(np, seed=10100):
-# Number generated using seed "10100"
+    # Number generated using seed "10100"
     inside_fixedseed = np.random.rand(5)
 
 # Number generated using seed "0"
