@@ -1,5 +1,3 @@
-import numpy as np
-import torch
 
 class fixedseed:
 
@@ -36,6 +34,7 @@ class fixedseed:
                 lib.random.set_state(old_state)
             elif lib.__name__ == "torch":
                 lib.set_rng_state(old_state)
+
 
 class randomseed(fixedseed):
 

@@ -1,14 +1,19 @@
 # seedpy
 Easily seed frameworks used for machine learning like Numpy and PyTorch using context managers.
 
-# Disclaimer
+## Disclaimer
 This is almost entirely untested software (especially the torch part). Use at your own risk.
 If you have feature suggestions, found bugs, or want to contribute, feel free to open up issues and / or pull-requests.
 
-# Installation
+## Changelog
+
+* **0.2** - Added decorators, removed requirement for `numpy` and `pytorch`
+
+
+## Installation
 `pip install git+https://github.com/MatthiasJakobs/seedpy.git`
 
-# Usage
+## Usage
 Use `fixedseed` to fix the seed of the global Numpy inside the context manager:
 
 ```python
