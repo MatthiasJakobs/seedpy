@@ -5,6 +5,9 @@ Easily seed frameworks used for machine learning like Numpy and PyTorch using co
 This is almost entirely untested software (especially the torch part). Use at your own risk.
 If you have feature suggestions, found bugs, or want to contribute, feel free to open up issues and / or pull-requests.
 
+# Installation
+`pip install git+https://github.com/MatthiasJakobs/seedpy.git`
+
 # Usage
 Use `fixedseed` to fix the seed of the global Numpy inside the context manager:
 
