@@ -1,4 +1,4 @@
-![seedpy logo](https://imgur.com/a/qwP8rpc)
+![seedpy logo](https://i.imgur.com/Rvv9Z3g.png)
 
 # seedpy
 Easily seed frameworks used for machine learning like Numpy and PyTorch using context managers.
