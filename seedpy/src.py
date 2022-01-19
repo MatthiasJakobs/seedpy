@@ -19,7 +19,8 @@ class fixedseed:
                 lib.random.seed(self.context_seed)
             elif lib.__name__ == "torch":
                 self.old_states.append(lib.get_rng_state())
-                lib.manual_seed(self.context_seed)
+                if self.context_seed is not None:
+                    lib.manual_seed(self.context_seed)
             else:
                 raise NotImplementedError("Library {} not currently implemented".format(lib.__name__))
 
