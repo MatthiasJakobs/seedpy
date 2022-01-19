@@ -18,8 +18,8 @@ class fixedseed:
                 self.old_states.append(lib.random.get_state())
                 lib.random.seed(self.context_seed)
             elif lib.__name__ == "torch":
-                self.old_states.append(lib.get_rng_state())
                 if self.context_seed is not None:
+                    self.old_states.append(lib.get_rng_state())
                     lib.manual_seed(self.context_seed)
             else:
                 raise NotImplementedError("Library {} not currently implemented".format(lib.__name__))
@@ -34,7 +34,8 @@ class fixedseed:
             if lib.__name__ == "numpy":
                 lib.random.set_state(old_state)
             elif lib.__name__ == "torch":
-                lib.set_rng_state(old_state)
+                if self.context_seed is not None:
+                    lib.set_rng_state(old_state)
 
 
 class randomseed(fixedseed):
