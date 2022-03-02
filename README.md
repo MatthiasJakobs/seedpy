@@ -9,6 +9,7 @@ If you have feature suggestions, found bugs, or want to contribute, feel free to
 
 ## Changelog
 
+* **0.3** - Added seed and random state conversion methods and a numerical seed generator
 * **0.2** - Added decorators, removed requirement for `numpy` and `pytorch`
 
 
@@ -42,4 +43,13 @@ The same syntax can be used for the `randomseed` context in order to randomize c
 ```python
 with randomseed([torch, np]):
     ...
+```
+
+
+You can use `get_random_state` to obtain a `numpy.random.RandomState` object from any seed-like value (`int` or `str`) or an existing `RandomState` object.
+This is particularly useful when defining reproducible functions to offer a wide variety of possible seeding options, e.g.
+```python
+def do_something(..., state=None):
+    random_state = get_random_state(state) # could be int, str or RandomState
+    ....
 ```
