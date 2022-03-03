@@ -4,7 +4,7 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(name='seedpy',
-      version='0.2',
+      version='0.3',
       description='Easy seeding for machine learning frameworks',
       long_description=long_description,
       long_description_content_type='text/markdown',
