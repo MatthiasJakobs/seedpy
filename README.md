@@ -14,7 +14,7 @@ If you have feature suggestions, found bugs, or want to contribute, feel free to
 
 
 ## Installation
-`pip install git+https://github.com/MatthiasJakobs/seedpy.git`
+`pip install seedpy`
 
 ## Usage
 Use `fixedseed` to fix the seed of the global Numpy inside the context manager:
